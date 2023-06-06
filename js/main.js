@@ -1,7 +1,8 @@
 const form = document.getElementById("novoItem");
+lista.appendChild(novoItem)
 
 form.addEventListener("submit", (evento) => {
-    evento.proventDefault() //interromper o comportamento
+    evento.preventDefault() //interromper o comportamento de enviar as informações de volta para o html
 
    criaElemento(evento.target.elements['nome'].value, evento.target.elements['quantidade'].value)
 })
@@ -18,5 +19,5 @@ function criaElemento(nome, quantidade) {
 
     const lista = document.getElementById("lista")
 
-    lista.appendChild(novoItem)
+    
 }
